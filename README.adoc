@@ -1,0 +1,42 @@
+= Asciidoc Splitter
+
+A Java utility to split asciidoc files into a modular documentation layout.
+At some point it will also include a way to run this via maven, and possibly gradle, however, at this point in time it is CLI only.
+
+== Building and Running
+
+Build using `./mvnw install -DskipTests` (until it's in a repo).
+The build will create a distribution directory in the `target` directory.
+This distribution directory will contain all the necessary jars and files needed to run the application.
+
+Run as follows:
+
+[source]
+----
+target/asciidoc-splitter-1.0-SNAPSHOT-bin/bin/asciidoc-splitter.sh
+----
+
+Note the name of the directory will change based on the version of the splitter.
+
+The list of relevant options are:
+
+[source,bash]
+----
+  -a=<String=Object>[\|<String=Object>...]
+                           Key=Value pairs to set as attributes to asciidoctor.
+                             Multiples separated by '|': 'key1=v1|key2=v2'
+  -h, --help               Show this help message and exit.
+  -i=<ignoreFiles>[,<ignoreFiles>...]
+                           Ignore file, multiples separated by ','
+      -ob=<outputBranch>   Branch in output repository.
+      -or=<outputRepo>     Git URL to the output repository.
+      -sb=<sourceBranch>   Branch in source repository.
+      -sr=<sourceRepo>     Git URL to the source repository.
+  -v                       Verbose logging
+  -V, --version            Print version information and exit.
+----
+
+== Contributing
+
+I'll fill this out a bit more, but I'm going to be doing this all on GitHub.
+Please create an issue and send me a pull request.

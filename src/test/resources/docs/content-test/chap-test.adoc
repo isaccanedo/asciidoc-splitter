@@ -1,0 +1,32 @@
+== Assembly One
+
+Here's some preamble for an assembly.
+
+Then one more paragraph.
+
+[module-type="proc"]
+=== Module One
+
+I think I will start things off with a list
+
+* One
+* Two
+** Two-one
+** Two-two
+* Three
+
+[id="con-module-two_{context}"]
+==== Module Two
+
+Some sort of text goes here
+
+[source,java]
+----
+public class HelloWorld { // <1>
+    public static void main(String... args) {
+        System.out.println("Hello World"); // <2>
+    }
+}
+----
+<1> First Java Class
+<2> Output to standard out
